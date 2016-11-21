@@ -21,7 +21,7 @@ public class WebController extends WebMvcConfigurerAdapter {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		//super.addViewControllers(registry);
-		registry.addViewController("/index").setViewName("index");
+		registry.addViewController("/index").setViewName("index2");
 	}
 
 	@GetMapping("/")

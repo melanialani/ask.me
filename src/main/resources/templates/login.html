@@ -6,7 +6,7 @@
 <!-- BEGIN HEAD -->
 <head>
      <meta charset="UTF-8" />
-    <title>BCORE Admin Dashboard Template | Login Page</title>
+    <title>ask.me | Login Page</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -41,8 +41,8 @@
                 <p class="text-muted text-center btn-block btn btn-primary btn-rect">Enter your username and password</p>
                 <input type="text" placeholder="username" th:field="*{username}" class="form-control" />
                 <!--p  th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">User's name format is not acceptable</p-->
-                <input type="password" placeholder="password" class="form-control" />
-                <input class="btn text-muted text-center btn-danger" type="submit" value="Sign in">
+                <input type="password" placeholder="password" th:field="*{password}" class="form-control" />
+                <input class="btn text-muted text-center btn-danger" type="submit" value="Sign in"/>
             </form>
         </div>
         <div id="forgot" class="tab-pane">

@@ -8,15 +8,10 @@ public class User {
 	@NotNull
 	@Size(min=3, max=32)
 	private String username; 
-
+	
 	@NotNull
-	@Min(5)
-	private int age; 
-
-	@Override
-	public String toString() {
-		return "User [username=" + username + ", age=" + age + "]";
-	}
+	@Size(min=8, max=32)
+	private String password; 
 
 	public String getUsername() {
 		return username;
@@ -26,11 +21,13 @@ public class User {
 		this.username = username;
 	}
 
-	public int getAge() {
-		return age;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setPassword(String password) {
+		this.password = password;
 	}
+	
+	
 }
