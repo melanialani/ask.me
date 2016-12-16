@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Edit Post Form</title>
+</head>
+<body>
+
+<h3>Edit Post Information</h3>
+<form action="#" th:action="@{/post/edit/${post.id}}" th:object="${post}" method="post">
+<table border="1">
+	<tr>
+		<td>ID</td>
+		<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+	</tr>
+	<tr>
+		<td>Questioner</td>
+		<td><input type="text" th:field="*{questioner}" /></td>
+	</tr>
+	<tr>
+		<td>Answering</td>
+		<td><input type="text" th:field="*{answering}" /></td>
+	</tr>
+	<tr>
+		<td>Question</td>
+		<td><input type="text" th:field="*{question}" /></td>
+	</tr>
+	<tr>
+		<td>Answer</td>
+		<td><input type="text" th:field="*{answer}" /></td>
+	</tr>
+	<tr>
+		<td>Date</td>
+		<td><input type="text" th:field="*{date}" /></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td><input type="number" th:field="*{status}" min="0" max="1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Submit" /> 
+		<input type="reset" value="Reset" /></td>
+	</tr>
+</table>
+</form>
+
+<br/><br/>
+<a th:href="@{/post}">Back</a>
+
+</body>
+</html>

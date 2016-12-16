@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Add Friend Result</title>
+</head>
+<body>
+	<h1>Following Detail</h1>
+	
+    <table border="1">
+	<tr>
+		<td>Username</td>
+		<td th:text="${friend.username}"></td>
+	</tr>
+	<tr>
+		<td>Following</td>
+		<td th:text="${friend.following}"></td>
+	</tr>
+	</table>
+	
+	<br/><br/>
+	<a href="/friend">Back to friend list</a>
+</body>
+</html>

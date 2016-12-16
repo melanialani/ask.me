@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Add Answer Result</title>
+</head>
+<body>
+	<h1>Answer Detail</h1>
+	
+    <table border="1">
+    <tr>
+		<td>Question id</td>
+		<td th:text="${answer.question_id}"></td>
+	</tr>
+	<tr>
+		<td>Your answer was</td>
+		<td th:text="${answer.answer}"></td>
+	</tr>
+	</table>
+	
+	<br/><br/>
+	<a href="/ask">Back to ask list</a>
+</body>
+</html>

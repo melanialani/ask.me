@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ASK Me</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<link rel="stylesheet" type="text/css"  href="assets/css/gila-screen.css" media="screen" title="ASK.Me (screen)" />
+<link rel="stylesheet" type="text/css" href="assets/css/gila-print.css" media="print" />
+</head>
+<body>
+<!-- For non-visual user agents: -->
+<div id="top"><a href="#main-copy" class="doNotDisplay doNotPrint">Skip to main content.</a></div>
+<!-- ##### Header ##### -->
+<div id="header">
+  <h1 class="headerTitle"> <a href="#">ASK.<span>Me</span></a> </h1>
+  <div class="subHeader">  </div>
+</div>
+<div id="side-bar">
+  <!-- ##### Left Sidebar ##### -->
+  <div class="leftSideBar">
+  
+	<br>
+	<br>
+    <p class="sideBarTitle">Menu</p>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="#stylesheets">TimeLine</a></li>
+	  <li><a href="#stylesheets">Questions</a></li>
+      <li><a href="#accessibility">Setting</a></li>
+    </ul>
+	
+    
+    <br>
+	<br>
+	<br>
+	<br>
+	
+    <p class="sideBarTitle">ASK.Me</p>
+    <span class="sideBarText"> Comments and constructive criticisms are welcome <a href="#">via email</a>. </span> </div>
+  <!-- ##### Right Sidebar ##### -->
+  <div class="rightSideBar">
+    <p class="sideBarTitle">Top 5 Queations Of The Week</p>
+    <div class="sideBarText"><strong>Tanggal</strong><br />
+      1. </div>
+    <div class="sideBarText"><strong>Tanggal</strong><br />
+      2.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      3.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      4.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      5.</div>
+    <a href="" class="more">more news &raquo;</a>
+    
+  </div>
+</div>
+<!-- ##### Main Copy ##### -->
+<div id="main-copy">
+  <h1 id="introduction" style="border-top: none; padding-top: 0;">ASK ME</h1>
+  <p>Profile </p>
+ <!--  <form action="#" th:action="@{/}" th:object="${question}" method="post" class="form-tanya"> \
+	<textarea name="pertanyaan" rows="5" cols="60"></textarea><BR>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input type="submit" name="submit" value="ASK"><a href="editp.html"></a> </input>
+ </form>
+-->
+
+<h3>User Detail</h3>
+<table border="1">
+	<tr>
+		<td>Username</td>
+		<td th:text="${user.username}"></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td th:text="${user.password}"></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td th:text="${user.email}"></td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td th:text="${user.name}"></td>
+	</tr>
+	<tr>
+		<td>Phone</td>
+		<td th:text="${user.phone}"></td>
+	</tr>
+	<tr>
+		<td>Birthday</td>
+		<td th:text="${user.birthday}"></td>
+	</tr>
+</table>
+<br/><br/>
+<a th:href="@{/user}">Back</a>
+	
+  <h1 id="cross-browser">Questions</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+</div>
+<!-- ##### Footer ##### -->
+<div id="footer">
+  <div class="doNotPrint"> <a href="#">Tell a Friend</a> | <a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | <a href="#">Feedback</a> | <a href="#">Help</a> </div>
+  <div> Copyright &copy; 2016, ASK.Me </div>
+</div>
+</body>
+</html>

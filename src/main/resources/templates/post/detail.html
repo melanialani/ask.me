@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Post Detail</title>
+</head>
+<body>
+
+<h3>Post Detail</h3>
+<table border="1">
+	<tr>
+		<td>ID</td>
+		<td th:text="${post.id}"></td>
+	</tr>
+	<tr>
+		<td>Questioner</td>
+		<td th:text="${post.questioner}"></td>
+	</tr>
+	<tr>
+		<td>Answering</td>
+		<td th:text="${post.answering}"></td>
+	</tr>
+	<tr>
+		<td>Question</td>
+		<td th:text="${post.question}"></td>
+	</tr>
+	<tr>
+		<td>Answer</td>
+		<td th:text="${post.answer}"></td>
+	</tr>
+	<tr>
+		<td>Date</td>
+		<td th:text="${post.date}"></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td th:text="${post.status}"></td>
+	</tr>
+</table>
+<br/><br/>
+<a th:href="@{/post}">Back</a>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Post List</title>
+</head>
+<body>
+
+<h3>Post List</h3>
+<table border="1">
+	<tr>
+		<th>Questioner</th>
+		<th>Answering</th>
+		<th>Question</th>
+		<th>Answer</th>
+		<th>Action</th>
+	</tr>
+	<tr th:each="post : ${posts}">
+		<td th:text="${post.questioner}"></td>
+		<td th:text="${post.answering}"></td>
+		<td th:text="${post.question}"></td>
+		<td th:text="${post.answer}"></td>
+		<td>
+			<a th:href="@{'/post/detail/' + ${post.id}}">Detail</a>
+			<a th:href="@{'/post/edit/' + ${post.id}}">Edit</a>
+			<a th:href="@{'/post/delete/' + ${post.id}}">Delete</a>
+		</td>
+	</tr>
+</table>
+
+<br/><br/>
+<a th:href="@{/post/add}">Add new post</a>
+
+</body>
+</html>

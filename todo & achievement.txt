@@ -1,0 +1,23 @@
+https://bitbucket.org/melanialani/cc02_ask.me
+
+achievement list
+- see list of user (http://localhost:8080/user)
+- see user's detail (http://localhost:8080/user/detail/username)
+- edit user's detail (http://localhost:8080/user/edit/username)
+- delete user (http://localhost:8080/user/delete/username)
+- see user's home (http://localhost:8080/user/home/test)
+
+- see following list (all user) (http://localhost:8080/friend)
+- follow friend (http://localhost:8080/friend/add)
+- unfollow friend (http://localhost:8080/friend/delete/id)
+
+- see list of question & its answer (http://localhost:8080/ask)
+- ask question (http://localhost:8080/ask/question)
+- answer question (http://localhost:8080/ask/answer)
+- get random question (http://localhost:8080/ask/random_question)
+
+todo list
+- tampilan !!
+- login & logout
+- user's timeline (feed dari teman yg di follow)
+- HOSTING (+ AWS)

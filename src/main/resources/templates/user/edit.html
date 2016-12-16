@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Edit User Form</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+
+<style type="text/css">
+body {
+  color: black;
+  background-color: white;
+  font-family: "times new roman", times, roman, serif;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+}
+
+
+acronym, .titleTip {
+  font-style: italic;
+  border-bottom: none;
+}
+
+acronym:after, .titleTip:after {  /* Prints titles after the acronyms/titletips. Doesn't work in MSIE */
+  content: "(" attr(title) ")";
+  font-size: 90%;
+  font-style: normal;
+  padding-left: 1ex;
+}
+
+.doNotPrint {
+  display: none !important;
+}
+
+
+/* ##### Header ##### */
+
+#header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.headerTitle {
+  font-size: 200%;
+  margin: 0;
+  padding: 0 0 0.5ex 0;
+}
+
+.headerTitle a {
+  color: black;
+  background-color: transparent;
+  font-family: "trebuchet ms", verdana, helvetica, arial, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.subHeader {
+  
+   text-align: left;
+}
+
+
+/* ##### Side Bars ##### */
+
+#side-bar {
+  display: none;
+}
+
+
+/* ##### Main Copy ##### */
+
+#main-copy {
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+#main-copy h1 {
+  font-family: "trebuchet ms", verdana, helvetica, arial, sans-serif;
+  font-size: 120%;
+  margin: 2ex 0 1ex 0;
+  padding: 0;
+}
+
+#main-copy a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#main-copy a:after {  /* Prints the links' URIs after the links' texts. Doesn't work in MSIE */
+  
+  font-size: 90%;
+  padding-left: 1ex;
+}
+
+p {
+  margin: 0 0 2ex 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 1ex 0;
+}
+
+dd {
+  margin: 0 0 2ex 1.5em;
+  padding: 0;
+}
+
+body {
+  color: black;
+  background-color: rgb(243,242,235);
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 73%;  /* Enables font size scaling in MSIE */
+  margin: 0;
+  padding: 0;
+}
+
+html > body {
+  font-size: 9pt;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px dotted rgb(168,140,83);
+  cursor: help;
+  margin: 0;
+  padding: 0;
+}
+
+.doNotDisplay {
+  display: none !important;
+   text-align: left;
+}
+
+
+.smallCaps {
+  font-size: 117%;
+  font-variant: small-caps;
+}
+
+
+/* ##### Header ##### */
+
+#header {
+  color: inherit;
+  background-color: rgb(184,38,25);
+}
+
+.headerTitle {
+  margin: 0;
+  padding: 0.25em 4mm 0.25em 4mm;
+}
+
+.headerTitle a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 110%;  /* For MSIE */
+  font-weight: bold;
+  font-style: italic;
+}
+
+.headerTitle > a {
+  font-size: 138%;  /* For fully standards-compliant user agents */
+}
+
+.headerTitle span {
+  color: white;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.subHeader {
+  color: white;
+  background-color: black;
+  font-size: 109%;
+  text-align: center;
+  margin: 0;
+  padding: 0.5ex 0;
+}
+
+.subHeader a {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 1ex;
+}
+
+.subHeader a:hover {
+  color: black;
+  background-color: white;
+}
+
+
+/* ##### Left Side Bar ##### */
+
+.leftSideBar {
+  width: 12.5em;
+  float: left;
+  clear: left;
+}
+
+.leftSideBar .sideBarTitle {
+  color: rgb(64,64,64);
+  background-color: rgb(230,223,207);
+  font-weight: bold;
+  margin: 0;
+  padding: 0.8ex 1ex;
+}
+
+.leftSideBar ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.leftSideBar li {
+  margin: 1ex;
+  padding: 0 0 1.25ex 0.75ex;
+}
+
+.leftSideBar a {
+  color: rgb(166,140,83);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.leftSideBar a:hover {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.leftSideBar .sideBarText {
+  color: rgb(166,140,83);
+  background-color: transparent;
+  line-height: 1.25em;
+  margin: 1ex 0.25ex 1.5em 0.75ex;
+  padding: 0;
+  display: block;
+}
+
+.leftSideBar .sideBarText a {
+  text-decoration: underline;
+}
+
+.leftSideBar .sideBarText a:hover {
+  text-decoration: none;
+}
+
+.leftSideBar .thisPage {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  font-weight: bold;
+}
+
+
+/* ##### Right Side Bar ##### */
+
+.rightSideBar {
+  width: 13em;
+  margin: 2ex 0.75ex 0 0;
+  padding: 0;
+  float: right;
+  clear: right;
+  border: 1px solid rgb(216,210,195);
+}
+
+[class~="rightSideBar"] {
+  margin-right: 1.5ex;
+}
+
+.rightSideBar .sideBarTitle {
+  color: black;
+  background-color: rgb(230,223,207);
+  font-weight: bold;
+  margin: 1.25ex 1ex;
+  padding: 0.9ex 1ex;
+}
+
+.rightSideBar a {
+  color: rgb(166,140,83);
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.rightSideBar a:hover {
+  text-decoration: none;
+}
+
+.rightSideBar .sideBarText {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 2ex 1em 2ex;
+}
+
+.rightSideBar .more {
+  text-decoration: none;
+  text-align: right;
+  margin: 0;
+  padding: 0 2ex 1em 2ex;
+  display: block;
+}
+
+.rightSideBar .more:hover {
+  text-decoration: underline;
+}
+
+
+/* ##### Main Copy ##### */
+
+#main-copy {
+  color: black;
+  background-color: white;
+  text-align: justify;
+  line-height: 1.5em;
+  margin: 0 0 0 12.5em;
+  padding: 0.5ex 15em 1em 1em;
+  border-left: 1px solid rgb(216,210,195);
+}
+
+#main-copy h1 {
+  color: rgb(166,140,83);
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 175%;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  margin: 1em 0 0 0;
+  padding: 1em 0 0 0;
+  border-top: 1px solid rgb(216,210,195);
+}
+
+#main-copy a {
+  color: rgb(168,140,83);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#main-copy a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 1em 0 1.5em 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 0.5ex 0;
+}
+
+dd {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+
+/* ##### Footer ##### */
+
+#footer {
+  color: black;
+  background-color: rgb(230,223,207);
+  font-size: 92%;
+  text-align: center;
+  line-height: 1.25em;
+  margin: 0;
+  padding: 1em 4mm 1em 4mm;
+  clear: both;
+}
+
+#footer div {
+  margin: 0;
+  padding: 0 0 1ex 0;
+}
+
+#footer a {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
+	
+	</style>
+	
+
+
+</head>
+<body>
+
+<div id="top"><a href="#main-copy" class="doNotDisplay doNotPrint">Skip to main content.</a></div>
+<!-- ##### Header ##### -->
+<div id="header">
+  <h1 class="headerTitle"> <a href="#">ASK.<span>Me</span></a> </h1>
+  <div class="subHeader">  </div>
+</div>
+
+ <!-- ##### Left Sidebar ##### -->
+  <div class="leftSideBar">
+  
+    <p class="sideBarTitle">Menu</p>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a th:href="@{'/user/detail/test'}">Profile</a></li>
+      <li><a th:href="@{/user}">TimeLine</a></li>
+	  <li><a th:href="@{/ask}">Questions</a></li>
+      <li><a href="#accessibility">Setting</a></li>
+      <li><a th:href="@{/user}">Follow Friends</a></li>
+    </ul>
+	
+   
+	
+    <p class="sideBarTitle">ASK.Me</p>
+    </div>
+  <!-- ##### Right Sidebar ##### -->
+  <div class="rightSideBar">
+    <p class="sideBarTitle">Top 5 Queations Of The Week</p>
+    <div class="sideBarText"><strong>Tanggal</strong><br />
+      1. </div>
+    <div class="sideBarText"><strong>Tanggal</strong><br />
+      2.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      3.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      4.</div>
+	  <div class="sideBarText"><strong>Tanggal</strong><br />
+      5.</div>
+    <a href="" class="more">more news &raquo;</a>
+    
+  <span class="sideBarText"> Comments and constructive criticisms are welcome <a href="#">via email</a>. </span></div>
+<div id="main-copy">
+  <h1 id="introduction" style="border-top: none; padding-top: 0;">ASK ME</h1>
+
+<h3>Edit User Information</h3>
+<!-- form action="#" th:action="@{/user/edit_user}" th:object="${user}" method="post" -->
+<form action="#" th:action="@{/user/edit/${user.username}}" th:object="${user}" method="post">
+<table border="1">
+	<tr>
+		<td>Username</td>
+		<td><input type="text" th:field="*{username}" readonly="readonly" /></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" th:field="*{password}" maxlength="32" required="required" /></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input type="email" th:field="*{email}" required="required" /></td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td><input type="text" th:field="*{name}" /></td>
+	</tr>
+	<tr>
+		<td>Phone</td>
+		<td><input type="number" th:field="*{phone}" /></td>
+	</tr>
+	<tr>
+		<td>Birthday</td>
+		<td><input type="text" th:field="*{birthday}" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></td>
+	</tr>
+</table>
+</form>
+
+<br/><br/>
+<a th:href="@{/user}">Back</a>
+</div>
+<!-- ##### Footer ##### -->
+<div id="footer">
+  <div class="doNotPrint"> <a href="#">Tell a Friend</a> | <a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | <a href="#">Feedback</a> | <a href="#">Help</a> </div>
+  <div> Copyright &copy; 2016, ASK.Me </div>
+</div>
+</body>
+</html>

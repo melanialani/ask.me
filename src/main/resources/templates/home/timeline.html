@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Ask.me | Home</title>
+</head>
+<body>
+Friend Feed
+<div></div>
+<div th:each="ask : ${asks}" style="border:1px solid black;border-radius:5px;padding:5px;width:50%;margin:5px;">
+	Question :
+	<label th:text="${ask.question}"></label>
+	( by : <label th:text="${ask.questioner}"></label> )
+	<div></div>
+	Answer :
+	<label th:text="${ask.answer}"></label>
+	( by : <label th:text="${ask.answering}"></label> )
+</div>
+</body>
+</html>

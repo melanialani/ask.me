@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Add/Edit User Result</title>
+</head>
+<body>
+	<h1>User Detail</h1>
+	
+    <table border="1">
+	<tr>
+		<td>Username</td>
+		<td th:text="${user.username}"></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td th:text="${user.password}"></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td th:text="${user.email}"></td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td th:text="${user.name}"></td>
+	</tr>
+	<tr>
+		<td>Phone</td>
+		<td th:text="${user.phone}"></td>
+	</tr>
+	<tr>
+		<td>Birthday</td>
+		<td th:text="${user.birthday}"></td>
+	</tr>
+	</table>
+	
+	<br/><br/>
+	<a href="/user">Back to user list</a>
+</body>
+</html>

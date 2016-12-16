@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Add Question Result</title>
+</head>
+<body>
+	<h1>Question Detail</h1>
+	
+    <table border="1">
+	<tr>
+		<td>Questioner</td>
+		<td th:text="${question.questioner}"></td>
+	</tr>
+	<tr>
+		<td>Answering</td>
+		<td th:text="${question.answering}"></td>
+	</tr>
+	<tr>
+		<td>The question itself</td>
+		<td th:text="${question.question}"></td>
+	</tr>
+	</table>
+	
+	<br/><br/>
+	<a href="/ask">Back to ask list</a>
+</body>
+</html>

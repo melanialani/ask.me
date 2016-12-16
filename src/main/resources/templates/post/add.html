@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Add Post Form</title>
+</head>
+<body>
+
+<h3>Add New Post</h3>
+<form action="#" th:action="@{/post/add}" th:object="${post}" method="post">
+<table border="1">
+	<tr>
+		<td>Questioner</td>
+		<td><input type="text" th:field="*{questioner}" required="required" /></td>
+	</tr>
+	<tr>
+		<td>Answering</td>
+		<td><input type="text" th:field="*{answering}" required="required" maxlength="32" /></td>
+	</tr>
+	<tr>
+		<td>Question</td>
+		<td><input type="text" th:field="*{question}" required="required" /></td>
+	</tr>
+	<tr>
+		<td>Answer</td>
+		<td><input type="text" th:field="*{answer}" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></td>
+	</tr>
+</table>
+</form>
+
+<br/><br/>
+<a th:href="@{/post}">Back</a>
+
+</body>
+</html>

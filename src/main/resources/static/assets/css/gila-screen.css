@@ -1,100 +1,11 @@
-body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.form-signin {
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
-    
-    
-
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-    margin-bottom: 10px;
-}
-.form-signin .checkbox {
-    font-weight: normal;
-}
-.form-signin input[type="text"],
-.form-signin input[type="password"],
-.form-signin input[type="email"] {
-    position: relative;
-    font-size: 13px;
-   height: 40px!important;
-    height: auto;
-    padding: 5px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-top:10px!important;
-}
-.form-signin input[type="text"]:focus,
-.form-signin input[type="password"]:focus,
-.form-signin input[type="email"]:focus  {
-    z-index: 2;
-}
-.form-signin input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-radius: 0;
-}
-
-.list-inline a {
-    color:#000000 !important;
-    font-size:13px !important;
-}
-
-.list-inline a:hover {
-    color:#24a2f6!important;
-    text-decoration:none;
-}
-.btn-lg {
-    margin:0px!important;
-}
-.form-signin p {
-    /*background-color:#000;*/
-    font-size:16px !important;
-     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color:white;
-    padding:8px 0px 8px 0px;
-    border-radius:5px;
-      -webkit-border-radius:5px;
-    -moz-border-radius: 5px;
-
-}
-#login {
-    margin-top:30px;
-}
-
-#forgot {
-    margin-top:50px;
-}
-
-#signup {
-    margin-top:30px;
-}
-
-#logoimg {
-  width: 315px;
-height: 51px;
-padding-left: 33px
-}
+/**********************************
+ * TITLE: Gila Screen Stylesheet  * 
+ * URI  : gila/gila-screen.css    *
+ * MODIF: 2003-Apr-30 19:09 +0800 *
+ **********************************/
 
 
+/* ##### Common Styles ##### */
 
 body {
   color: black;
@@ -118,7 +29,6 @@ acronym, .titleTip {
 
 .doNotDisplay {
   display: none !important;
-   text-align: left;
 }
 
 
@@ -379,113 +289,4 @@ dd {
 
 #footer a:hover {
   text-decoration: none;
-}
-
-body {
-  color: black;
-  background-color: white;
-  font-family: "times new roman", times, roman, serif;
-  font-size: 12pt;
-  margin: 0;
-  padding: 0;
-}
-
-acronym, .titleTip {
-  font-style: italic;
-  border-bottom: none;
-}
-
-acronym:after, .titleTip:after {  /* Prints titles after the acronyms/titletips. Doesn't work in MSIE */
-  content: "(" attr(title) ")";
-  font-size: 90%;
-  font-style: normal;
-  padding-left: 1ex;
-}
-
-.doNotPrint {
-  display: none !important;
-}
-
-
-/* ##### Header ##### */
-
-#header {
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid black;
-}
-
-.headerTitle {
-  font-size: 200%;
-  margin: 0;
-  padding: 0 0 0.5ex 0;
-}
-
-.headerTitle a {
-  color: black;
-  background-color: transparent;
-  font-family: "trebuchet ms", verdana, helvetica, arial, sans-serif;
-  font-weight: normal;
-  text-decoration: none;
-}
-
-.subHeader {
-  
-   text-align: left;
-}
-
-
-/* ##### Side Bars ##### */
-
-#side-bar {
-  display: none;
-}
-
-
-/* ##### Main Copy ##### */
-
-#main-copy {
-  text-align: justify;
-  margin: 0;
-  padding: 0;
-}
-
-#main-copy h1 {
-  font-family: "trebuchet ms", verdana, helvetica, arial, sans-serif;
-  font-size: 120%;
-  margin: 2ex 0 1ex 0;
-  padding: 0;
-}
-
-#main-copy a {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-#main-copy a:after {  /* Prints the links' URIs after the links' texts. Doesn't work in MSIE */
-  content: "<" attr(href) ">";
-  font-size: 90%;
-  padding-left: 1ex;
-}
-
-p {
-  margin: 0 0 2ex 0;
-  padding: 0;
-}
-
-dl {
-  margin: 0;
-  padding: 0;
-}
-
-dt {
-  font-weight: bold;
-  margin: 0;
-  padding: 0 0 1ex 0;
-}
-
-dd {
-  margin: 0 0 2ex 1.5em;
-  padding: 0;
 }
