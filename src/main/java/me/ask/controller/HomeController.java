@@ -45,7 +45,8 @@ public class HomeController {
 	@GetMapping("")
     public String addForm(Model model) {
         model.addAttribute("user", new User());
-        return "home/login";
+        //return "home/login";
+        return "login";
     }
 
     @PostMapping("/login")
@@ -65,12 +66,14 @@ public class HomeController {
             		
         			
             	}else{
-            		rtn = "home/login";
+            		//rtn = "home/login";
+            		rtn = "login";
             	}
         	}
     	}else{
     		modelMap.put("msg", "Incorrect Username");
-    		rtn = "home/login";
+    		//rtn = "home/login";
+    		rtn = "login";
     	}
     	
         return rtn;

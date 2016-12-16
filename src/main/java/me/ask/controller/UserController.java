@@ -66,7 +66,8 @@ public class UserController {
 	@GetMapping("/add")
     public String addForm(Model model) {
         model.addAttribute("user", new User());
-        return "user/add";
+        //return "user/add";
+        return "login";
     }
 
     @PostMapping("/add")
